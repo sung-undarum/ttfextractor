@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Font Extractor</string>
+    <string name="search_hint">앱 이름 또는 패키지 검색</string>
+    <string name="chip_font_only">글꼴 앱만</string>
+    <string name="chip_hide_system">시스템 앱 제외</string>
+    <string name="rescan">다시 검사</string>
+    <string name="scan_preparing">설치된 앱 목록을 불러오는 중…</string>
+    <string name="scanning">앱 검사 중 %1$d / %2$d · 글꼴 있는 앱 %3$d개</string>
+    <string name="scan_done">글꼴이 있는 앱 %1$d개 · 글꼴 파일 총 %2$d개</string>
+    <string name="empty">조건에 맞는 앱이 없습니다.\n필터를 풀거나 다시 검사해 보세요.</string>
+    <string name="app_meta">글꼴 %1$d개 · %2$s</string>
+    <string name="badge_font_app">글꼴 앱</string>
+
+    <string name="font_count">글꼴 파일 %1$d개</string>
+    <string name="select_all">전체 선택</string>
+    <string name="deselect_all">선택 해제</string>
+    <string name="export_n">추출 (%1$d)</string>
+    <string name="select_first">추출할 글꼴을 먼저 선택하세요.</string>
+    <string name="export_done">%1$d개 저장 완료: %2$s</string>
+    <string name="export_partial">%1$d / %2$d개 저장됨. 오류: %3$s</string>
+    <string name="perm_denied">저장 권한이 없어 추출할 수 없습니다.</string>
+    <string name="app_not_found">앱을 찾을 수 없습니다.</string>
+    <string name="share">공유</string>
+    <string name="share_failed">글꼴 파일을 준비하지 못했습니다.</string>
+    <string name="loading">불러오는 중…</string>
+    <string name="preview_unavailable">미리보기를 만들 수 없는 글꼴입니다</string>
+    <string name="preview_text">가나다라마바사 ABC abc 0123</string>
+</resources>
