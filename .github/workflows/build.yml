@@ -4,6 +4,9 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,8 +31,20 @@ jobs:
       - name: Build debug APK
         run: gradle assembleDebug --no-daemon --stacktrace
 
+      - name: Rename APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk FontExtractor-build${{ github.run_number }}.apk
+
       - uses: actions/upload-artifact@v4
-        if: success()
         with:
           name: FontExtractor-debug
-          path: app/build/outputs/apk/debug/*.apk
+          path: FontExtractor-build*.apk
+
+      # 로그인 없이 받을 수 있도록 Release 에도 첨부 (main 브랜치 푸시 때만)
+      - uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: Build ${{ github.run_number }}
+          body: "Debug APK built from ${{ github.sha }}"
+          files: FontExtractor-build*.apk
+          make_latest: true
